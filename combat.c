@@ -75,7 +75,7 @@ void fighter_action(Fighter *player, Team *opponent) {
         
         // Dodge mechanic: check if target can dodge based on speed
         int dodge = rand() % 10;
-        if (dodge <= target_fighter->speed) {  // Dodge chance based on speed
+        if (dodge <= target_fighter->speed / 10) {  // Dodge chance based on speed
             damage = 0;
             printf("\u2192 %s dodged the attack!\n", target_fighter->name);
         } else {
@@ -163,7 +163,7 @@ void fighter_action_ai(Fighter *ai, Team *opponent) {
         
         // Dodge mechanic for AI attacks too
         int dodge = rand() % 10;
-        if (dodge <= target_fighter->speed) {
+        if (dodge <= target_fighter->speed / 10 ) {
             damage = 0;
             printf("\u2192 %s dodged the attack from %s (AI)!\n", 
                    target_fighter->name, ai->name);
