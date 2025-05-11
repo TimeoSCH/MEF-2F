@@ -1,3 +1,5 @@
+
+
 // Clears the remaining characters in the input buffer (stdin)
 void clear_input_buffer() {
     int c;
