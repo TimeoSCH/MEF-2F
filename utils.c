@@ -1,4 +1,4 @@
-
+#include "cy_fighters.h"
 
 // Clears the remaining characters in the input buffer (stdin)
 void clear_input_buffer() {
