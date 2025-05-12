@@ -1,13 +1,13 @@
 #include "cy_fighters.h"
 
-// Vérifie si une équipe est entièrement KO (plus de combattants vivants)
+// Check if a team is still alive
 int is_team_KO(Team t) {
     for (int i = 0; i < t.member_count; i++) {
-        if (t.members[i].hp > 0) { // Si au moins 1 vivant, retourne 0
+        if (t.members[i].hp > 0) { // If at least 1 alive
             return 0; 
         }
     }
-    return 1; // Tous KO
+    return 1; 
 }
 
 
